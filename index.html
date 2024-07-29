@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="" href="master.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Typing Speed Test Game</title>
+  </head>
+  <body>
+    <div class="game">
+      <div class="name">Typing Speed Test Game</div>
+      <div class="container">
+        <div class="message">
+          You Are Playing On
+          <span class="lvl"></span> Level & You Have
+          <span class="seconds"></span> Seconds To Type The Word
+        </div>
+        <div class="start_sel">
+          <div class="reset_sel">
+            <form class="sel_box">
+              <label for="selectBox" class="ss">Choose Level :</label>
+              <select id="selectBox" name="items" class="choose">
+                <option value="Easy">Easy</option>
+                <option value="Normal">Normal</option>
+                <option value="Hard">Hard</option>
+              </select>
+            </form>
+            <button class="rest">Reset</button>
+          </div>
+
+          <button class="start">Start Playing</button>
+        </div>
+        <div class="the-word"></div>
+        <input type="text" class="input" />
+        <div class="upcoming-words">Words Will Show Here</div>
+        <div class="control">
+          <div class="time">Time Left: <span></span> Seconds</div>
+          <div class="score">
+            Score: <span class="got">0</span> From <span class="total"></span>
+          </div>
+        </div>
+        <div class="finish"></div>
+        <div class="instracion">
+          <h1 class="toggle">Game Name: Typing Speed Test</h1>
+          <div class="content">
+            <hr />
+            <h2 class="toggle">General Description:</h2>
+            <div class="content">
+              <p>
+                The game aims to test the player's typing speed and accuracy. It
+                includes different difficulty levels (Easy, Medium, and Hard)
+                where words suitable for each level are presented.
+              </p>
+              <hr />
+            </div>
+            <h2 class="toggle">Level:</h2>
+            <div class="content">
+              <ul class="add"></ul>
+              <hr />
+            </div>
+            <h2 class="toggle">How to Play:</h2>
+            <div class="content">
+              <ol>
+                <li>
+                  <strong>Select Level:</strong> The player chooses a difficulty
+                  level from a dropdown menu.
+                </li>
+                <li>
+                  <strong>Start Game:</strong> Click on the "Start Game" button
+                  to begin the game.
+                </li>
+                <li>
+                  <strong>Typing:</strong> A random word from the selected
+                  level's word list appears, and the player must type it into
+                  the input box.
+                </li>
+                <li class="add1"></li>
+                <li>
+                  <strong>Verification:</strong> After typing is completed or
+                  the time runs out, the correctness of the typed word is
+                  checked.
+                </li>
+                <li>
+                  <strong>Score:</strong> Points are calculated based on the
+                  number of correctly typed words.
+                </li>
+              </ol>
+              <hr />
+            </div>
+            <h2 class="toggle">Features:</h2>
+            <div class="content">
+              <ul>
+                <li>
+                  The remaining time is continuously updated during the game.
+                </li>
+                <li>
+                  Upcoming words are displayed in a list under the current word.
+                </li>
+                <li>
+                  After the game ends, a congratulatory message or end-of-game
+                  message is shown based on performance.
+                </li>
+                <li>
+                  Daily results are recorded in the browser's local storage.
+                </li>
+              </ul>
+              <hr />
+            </div>
+            <h2 class="toggle">User Interface:</h2>
+            <div class="content">
+              <ul>
+                <li>
+                  <strong>Title Bar:</strong> Displays the game title and
+                  features a scrolling horizontal line.
+                </li>
+                <li>
+                  <strong>Game Area:</strong> Includes the main user interface
+                  elements such as messages, Start Game button, word input
+                  field, upcoming word list, and time and score statistics.
+                </li>
+                <li>
+                  <strong>End Messages:</strong> Shows congratulatory messages
+                  upon winning or end-of-game messages when time runs out or an
+                  incorrect word is typed.
+                </li>
+              </ul>
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

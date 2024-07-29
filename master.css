@@ -1,0 +1,267 @@
+:root{
+   --main-color: #2196f3;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+ font-family: "Open Sans", sans-serif;
+}
+.game{
+    background-color: #eee;
+    min-height: 100vh;
+}
+.name{
+    padding: 20px;
+    text-align: center;
+    background: var(--main-color);
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    position: relative;
+}
+.name::before{
+content: "";
+    position: absolute;
+    height: 3px;
+    background-color: #2ab7f3;
+    width: 18.25%;
+    left: 0px;
+    bottom: 45%;
+    animation: moveLine 1s infinite alternate ease;
+}
+
+@keyframes moveLine {
+    0% {
+       left: 0px; 
+    }
+    100% {
+        left: 106px;
+    }
+}
+.name::after{
+content: "";
+   position: absolute;
+    height: 3px;
+    background-color: #2ab7f3;
+    width: 18.25%;
+    right: 0px;
+    bottom: 45%;
+    animation: moveLine1 1s infinite alternate ease;
+}
+@keyframes moveLine1 {
+    0% {
+       right: 0px; 
+    }
+    100% {
+        right: 106px;
+    }
+}
+
+@media (max-width: 600px) {
+    .name::after ,.name::before {
+        display: none;
+    }
+}
+.container{
+    max-width: 900px;
+    margin: auto;
+}
+
+.message{
+  background-color: white;
+  padding: 15px;
+  margin: 0px 0px 15px;
+  border-radius: 6px;
+  text-align: center;
+  border-radius: 5px;
+      height: 55px;
+}
+@media (max-width: 600px) {
+    .message {
+       height: 70px;
+    }
+}
+
+.message span::before{
+content: "[ ";
+    color: var(--main-color);
+}
+.message span::after{
+    content: " ]";
+        color: var(--main-color);
+}
+
+ .sel_box{
+    display: inline-grid;
+    background: var(--main-color);
+    width: fit-content;
+    color: white;
+    font-weight: bold;
+    border-radius: 13px;
+    padding: 10px;
+    
+}
+.sel_box .ss{
+  margin-bottom: 5px;
+}
+.sel_box .choose{
+    padding: 2px;
+    border: 1px solid var(--main-color);
+    cursor: pointer;
+}
+.sel_box .choose:focus{
+outline: none;
+}
+
+.reset_sel{
+display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rest{
+ background: var(--main-color);
+ color: white;
+ font-weight: bold;
+    border-radius: 13px;
+    border: 1px solid var(--main-color);
+    padding: 18px;
+    cursor: pointer;
+}
+.rest:focus{
+    outline: none;
+}
+
+.start{
+    text-align: center;
+    padding: 10px;
+    margin: 20px auto;
+    font-size: 20px;
+    display: block;
+    font-weight: bold;
+    background-color: #009688;
+    color: white;
+    width: 35%;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+.start:hover{
+    background-color: var(--main-color);
+}
+
+@media (max-width: 600px) {
+    .start {
+       width: 45%;
+    }
+}
+
+.the-word{
+    color: var(--main-color);
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+    user-select: none;
+}
+
+.input{
+    margin: 15px 0;
+  width: 100%;
+  display: block;
+  padding: 15px;
+  border: 3px solid var(--main-color);
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 6px;
+  caret-color: var(--main-color);
+}
+
+.input:focus{
+    outline: none;
+}
+
+.upcoming-words{
+     background-color: white;
+  margin: 15px 0;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.upcoming-words div{
+    padding: 10px;
+    margin: 4px;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.control{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px;
+}
+
+.control  span{
+font-weight: bold;
+  color: #009688;
+}
+
+.finish{
+padding: 15px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+}
+
+.finish .good{
+color: var(--main-color);
+}
+
+.finish .bad{
+color: red;
+}
+
+.instracion{
+      margin: 20px 10px 0px;
+   
+}
+li{
+list-style-type: none;
+margin-bottom: 8px;
+}
+h1 {
+color: #333;
+margin-bottom: 8px;
+}
+h2 {
+color: #555;
+}
+p:not(:last-child) {
+margin: 10px 0px 0px 0px;
+margin-bottom: 8px;
+}
+ul {
+margin: 10px 0;
+}
+
+  .content {
+            display: none;
+            margin-left: 20px;
+        }
+        .toggle {
+            cursor: pointer;
+            color: var(--main-color);
+        }
+        .toggle:hover {
+            text-decoration: underline;
+        }
